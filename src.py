@@ -31,8 +31,6 @@ if __name__ == "__main__":
         baseLocation=(df.loc[i][1],df.loc[i][2])
         has_neighbour=0
         for j in range(0,len(df)):
-            if(i==j):
-                continue
             neighbour=(df.loc[j][1],df.loc[j][2])
             dis=geodesic(baseLocation, neighbour).km*1000
             if(dis<=200):
